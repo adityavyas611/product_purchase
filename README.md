@@ -2,7 +2,8 @@
 
 - The user can purchase product and set number of quantities of product of a company.
 
-Hosted on : 
+Hosted on : https://romantic-mccarthy-6fd1a7.netlify.app/
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/) to install react.
