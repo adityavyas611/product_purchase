@@ -1,0 +1,13 @@
+.priceTable {
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+  
+.borderTable{
+    display: flex;
+    border: 1px solid #999;
+    padding: 18px;
+    text-align: center;
+}

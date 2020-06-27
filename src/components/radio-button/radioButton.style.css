@@ -1,0 +1,62 @@
+.radioButton{  
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+}
+  
+.radioButtonImage{
+    cursor: pointer;
+    height: 80px;
+    padding: 20px;
+    margin-right: 20px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 120px;
+}
+
+.radioButtonImage:hover {
+    cursor: pointer;
+    height: 80px;
+    padding: 20px;
+    margin-right: 20px;
+    border: 2px solid blue;
+    border-radius: 8px;
+    width: 120px;
+}
+
+.radioContainer {
+    display: flex;
+    margin: 100px auto;
+    justify-content: center;
+}
+
+.squareRadio {
+    border: 1px solid grey;
+    padding: 15px;
+    margin: 2px;
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+    margin-top: -70px;
+    color: grey;
+    cursor: pointer;
+}
+
+.squareRadio:hover {
+    color: white;
+    background-color: green;
+    border: 2px solid black;
+}
+
+.squareRadio:checked {
+    border: 5px solid blue;
+}
+
+.squareRadio-selected {
+    outline: 5px solid blue;
+}
+
+.textCenter {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,32 @@
+.header {
+    height: 100px;
+    width: auto;
+    display: flex;
+    background: black;
+    font-weight: 200;
+    color: white;
+    font-size: 36px;
+    justify-content: center;
+    align-items: center;
+}
+
+.progressbar1 {
+    width: 33%;
+    border-bottom: 5px solid blue;
+}
+
+.progressbar2 {
+    width: 66%;
+    border-bottom: 5px solid blue;
+}
+
+.progressbar3 {
+    width: 100%;
+    border-bottom: 5px solid blue;
+}
+
+.backButton {
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
