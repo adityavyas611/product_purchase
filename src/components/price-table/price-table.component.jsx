@@ -1,14 +1,18 @@
 import React from "react";
 import "./price-table.style.css";
 
-const PriceTable = ({ seat, product, company }) => {
+const PriceTable = ({ quantity, productName, companyName }) => {
+
+    /**
+     * @description - To Calculate the price based on the selected company, product and quantity by user
+     */
     const getPrice = () => {
-        if (company === 'cellManager') {
-            return 956 * Math.pow(seat,0.6) + 540;
-        } else if (company === 'microsoftImporter' && (product === 'microStation' || product === 'revit')) {
-            return 707 * Math.pow(seat,0.7) + 88;
-        } else {
-            return 354 * Math.pow(seat,0.7) + 44;
+        if (companyName === 'cellManager' && productName === 'microStation') {
+            return 956 * Math.pow(quantity,0.6) + 540;
+        } else if (companyName === 'microsoftImporter' && (productName === 'microStation' || productName === 'revit')) {
+            return 707 * Math.pow(quantity,0.7) + 88;
+        } else if (companyName === 'microsoftImporter' && productName === 'autodesk') {
+            return 354 * Math.pow(quantity,0.7) + 44;
         }
     };
 
@@ -19,8 +23,8 @@ const PriceTable = ({ seat, product, company }) => {
             <table className="priceTable">
                 <thead>
                     <tr>
-                        <th className="borderTable">Price x {seat}</th>
-                        <th className="borderTable">Service Price</th>
+                        <th className="borderTable">Price x {quantity}</th>
+                        <th className="borderTable">Maintenance Price</th>
                         <th className="borderTable">Total Price</th>
                     </tr>
                 </thead>
