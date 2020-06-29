@@ -2,18 +2,19 @@ import React from 'react';
 import './radioButton.style.css';
 
 const RadioButton = ({ options, updateProgress }) => {
+    /**
+    * @description - To handle the selected radio button and pass back the value of radio button
+    * @param {*} e - this parameter will have the event triggered from radio button
+    */ 
     const handleChange = (e) => {
-        const { target: { name, value } } = e;
-        if (name === 'seats') {
+        const { target: { value } } = e;
             updateProgress(value);
-        } else {
-            updateProgress(name);
-        }
     }
 
     return (
         <div className="radioContainer">
             {
+                // checking whether option has keys present, if not then render radio button as quantities else products or companies
                 options.map((option, idx) => Object.keys(option).length ? (
                     <div key={idx}>
                         <label>
@@ -23,7 +24,7 @@ const RadioButton = ({ options, updateProgress }) => {
                     </div>
                 ) : <label className="squareRadio" key={idx}>
                         <span className="textCenter">{option}</span>
-                        <input type="radio" name="seats" value={option} className="radioButton" onChange={handleChange} />
+                        <input type="radio" name="quantity" value={option} className="radioButton" onChange={handleChange} />
                     </label>)
             }
         </div>
