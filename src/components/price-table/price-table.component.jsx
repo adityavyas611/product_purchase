@@ -26,7 +26,7 @@ const PriceTable = ({ seat, product, company }) => {
                 </thead>
                 <tbody className="tablebody">
                     <tr>
-                        <td className="borderTable">${price}</td>
+                        <td className="borderTable">${price.toFixed(2)}</td>
                         <td className="borderTable">${(price * 0.3).toFixed(2)}</td>
                         <td className="borderTable">${(price + (price * 0.3)).toFixed(2)}</td>
                     </tr>
